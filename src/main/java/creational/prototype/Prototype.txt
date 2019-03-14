@@ -1,0 +1,40 @@
+The Prototype pattern is used when the type of Object to create is determined by a prototypical instance, which is
+ cloned to produce a new instance. Oftentimes, the Prototype pattern is used to get a unique instance of the same Object.
+
+Concepts:
+. Avoids costly creation
+. Avoids subclassing
+. Typically doesn't use "new"
+. Often utilizes a Interface
+. Usually implemented with a Registry
+Example: java.lang.Object#clone()
+
+    If an object is expensive to create, but we can get what we need by copying the member variables, the prototype is a great fit.
+
+Design:
+. Implements Clone/Cloneable interface
+. Avoids keyword "new"
+. Costly construction not handled by client
+. Can still utilize parameters for construction#
+. Shallow VS Deep copy
+
+Pitfalls:
+- Sometimes not clear when to use
+- Used with other patterns - Registry
+- Shallow VS Deep Copy
+
+Contrast:
+
+        | PROTOTYPE |                            |  FACTORY  |
+- Lighter weight construction                - Flexible Objects
+- Copy constructor or Clone                  - Multiple constructors
+- Shallow or Deep                            - Concrete Instance
+- Copy of itself                             - Fresh Instance
+
+Summary:
+- Guarantees unique instance every time
+- Confter refactored in later
+- Can help with performance issues
+    If an application is creating a lot of objects, this pattern can help us obtain these objects
+    faster without the heavyweight or overbearing nature of using the keyword "new".
+- Don't always jump to a Factory, often a Prototype can be a better fit

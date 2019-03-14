@@ -1,0 +1,35 @@
+The Memento pattern is used to externalize an object's state, usually to provide rollback functionality
+
+Concepts:
+. Restore Object to previous state
+. Externalize internal state
+. Undo/rollback
+. Shields complex internals from other Objects
+Examples: java.util.Date, java.io.Serializable
+
+Design:
+. Class based
+. Originator - creates an actual Memento
+. Caretaker - manages the copies or mementos created
+. Memento - represents the copy of the Ogirinator
+. Magic cookie - Combination of fields that take to recreate or copy the state of the Object
+. UML Diagram pieces:
+    Originator, Caretaker, Memento
+
+Pitfalls:
+- Can be expensive
+- Caretaker needs to consider how to manage/delete history
+- Exposing state information to other Objects
+
+Contrast:
+
+     | MEMENTO |                         | COMMAND |
+- State captured                    - Request captured ( rather than state )
+- Independent state                 - Independent request
+- Caretaker / history               - History is a side benefit
+
+Summary:
+- Captures a state
+- Can get heavy with history
+- Recreates the state of an Object
+- Very similar to Command

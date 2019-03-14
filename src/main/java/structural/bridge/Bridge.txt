@@ -1,0 +1,37 @@
+Bridge pattern is great for flexibility without breaking things with changes
+
+Concepts:
+. Decouple Abstraction and Implementation
+. Encapsulation, Composition, Inheritance
+. Changes in Abstraction won't affect the client
+. Details won't be right
+. Allows a level of indirection to be added into the application
+Examples: Drivers, JDBC Drivers
+
+Design:
+. Interfaces and Abstract Classes
+. Composition over Inheritance
+. More than just Composition
+. Expect changes from both sides
+. UML Diagram pieces:
+    Abstraction, Implementor, Refined Abstraction, Concrete Implementor
+
+Pitfalls:
+- Increases complexity
+- Conceptually difficult to plan
+- More than just good OO
+- Can be a little confusing
+
+Contrast:
+
+        | BRIDGE |                                 | ADAPTER |
+- Designed upfront                          - Works after code is designed
+- Abstraction and Implementation vary       - Legacy
+- Built in advance                          - Retrofitted in
+- Complex                                   - Provides different interface
+
+Summary:
+- Designed for uncertainty
+- Can be complex
+- Provides flexibility
+- More than composition

@@ -1,0 +1,36 @@
+The decorator pattern is a hierarchical pattern that builds
+ functionality at each level while using composition from similar data types
+
+Concepts:
+. Also called a wrapped
+. Adds behavior without affecting others
+. More than just Inheritance
+. Single Responsibility Principle
+    -> That responsibility should be entirely encapsulated by the class
+. Compose behavior dynamically
+Examples: java.io.InputStream, java.util.Collections#checkedList, UI components
+
+Design:
+. Inheritance based
+. Utilizes composition and inheritance (is-a, has-a)
+. Alternative to subclassing
+. Constructors requires instance from hierarchy
+
+Pitfalls:
+- New class for every feature added
+- Multiple little objects
+- Often confused with simple Inheritance
+-
+
+Contrast:
+
+    | DECORATOR |                              | COMPOSITE |
+- Contains another entity                   - Tree structure
+- Modifies behavior (adds)                  - Leaf and Composite have same interface
+- Doesn't change underlying object          - Unity between objects
+
+Summary:
+- Original Object can stay the same
+- Unique way to add functionality
+- Confused with Inheritance
+- Can be more complex for clients

@@ -1,0 +1,41 @@
+The Singleton pattern is one of the most heavily used design patterns
+ because of its simplicity to implement and the type of problem that it solves.
+
+Concepts:
+. Only one instance is created
+. Guarantees control of a resource
+. Lazily loaded
+Examples: Runtime, Logger, Spring Beans, Graphic Managers
+
+Design:
+. Class is responsible for lifecycle
+. Static in nature
+. Needs to be thread safe
+. Private instance
+. Private constructor
+. No parameters required for construction
+
+
+Pitfalls:
+- Often overused
+- Difficult to unit test
+- If not careful, Singletons are not thread-safe
+
+- Can be confused for a Factory
+    -> Rule of thumb: If getInstance() uses arguments, it is a Factory, not a Singleton
+
+Contrast:
+
+    | SINGLETON |                                    |  FACTORY  |
+- returns same instance                       - returns various instances
+- one constructor method - no args            - multiple constructors
+- no interface                                - interface / abstract classes - (contracts) driven
+- no subclasses (typically)                   - subclasses are involved
+                                              - adaptable to environment more easily
+
+
+Summary:
+- Guarantees one instance only in the application
+- Easy to implement
+- Solves a well defined problem
+- Don't abuse it

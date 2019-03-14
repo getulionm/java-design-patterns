@@ -1,0 +1,35 @@
+Adapter pattern is a greta pattern for connecting new code to legacy code without
+ having to change the working contract what was produced from the legacy code originally
+
+Concepts:
+. Plug adaptor
+. Converting interface into another interface
+. Legacy
+. Translates requests from the client to the code that we are adapting to
+. Client > Adapter > Adaptee
+Examples: Arrays -> Lists, Streams
+
+Design:
+. Client centric
+. Integrate new with old
+. Interface, but not required
+. Adaptee can be the implementation
+
+Pitfalls:
+- Don't complicate
+- Multiple Adapters
+- Don't add functionality
+
+Contrast:
+
+        | ADAPTER |                              | BRIDGE |
+- Works after code is designed              - Designed upfront
+- Legacy                                    - Abstraction and implementation vary
+- Retrofitted                               - Built in advance
+- Provides different interface              - Both adapt multiple systems
+
+Summary:
+- Simple solution
+- Easy to implement
+- Integrate with Legacy
+- Can provide multiple Adapters

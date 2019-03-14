@@ -1,0 +1,51 @@
+/*
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ Design patterns are typical solutions to commonly occurring problems in software design.
+ They are like pre-made blueprints that you can customize to solve a recurring design problem in your code.
+
+ Do not confuse:
+ Algorithm: Clear set of actions that can achieve a goal
+ Pattern: High-level description of a solution
+
+ - INTENT of the pattern briefly describes both the problem and the solution.
+ - MOTIVATION further explains the problem and the solution the pattern makes possible.
+ - STRUCTURE of classes shows each part of the pattern and how they are related.
+ - CODE EXAMPLE in one of the popular programming languages makes it easier to grasp the idea behind the pattern.
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+ Classification of patterns:
+
+ - Creational patterns
+    Provide object creation mechanisms that increase flexibility and reuse of existing code.
+    > Singleton
+    > Builder
+    > Factory
+    > AbstractFactory
+
+ - Structural patterns
+    Assemble objects and classes into larger structures, while keeping the structures flexible and efficient.
+    > Adapter
+    > Bridge
+    > Composite
+    > Facade
+    > Flyweight
+    > Proxy
+
+ - Behavioral patterns
+    Take care of effective communication and the assignment of responsibilities between objects.
+    > Chain of Responsibility
+    > Command
+    > Interpreter
+    > Iterator
+    > Mediator
+    > Memento
+    > Observer
+    > State
+    > Strategy
+    > Template Method
+    > Visitor
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+*/

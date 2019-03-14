@@ -1,0 +1,35 @@
+Flyweight is a pattern that minimizes memory use by sharing data with similarly typed objects.
+
+Concepts:
+. More efficient use of memory
+. Large number of similar Objects
+. Specially for stateless or immutable Objects
+. Most of the Object states can be extrinsic
+Examples: java.lang.String, java.lang.Integer#valueOf(int),
+ primitive types Boolean, Byte, Character, Short, Long have a valueOf method that is a flyweight in action
+
+Design:
+. Pattern of patterns
+. Utilizes a Factory
+. Encompasses Creation and Structure
+. Often manages all lifecycle of an object
+. UML Diagram pieces:
+    Client, Factory, Flyweight, ConcreteFlyweight
+
+Pitfalls:
+- Complex pattern
+- Premature optimization is required
+- Must understand the Factory pattern
+- Not a graphical pattern
+
+Contrast:
+
+       | FLYWEIGHT |                         | FACADE |
+- Memory optimization                    - Refactoring pattern
+- Optimization pattern                   - Simplified client
+- Immutable Objects                      - Provides a different Interface
+
+Summary:
+- Great for memory management
+- A little bit complex
+- Used a lot by the core API

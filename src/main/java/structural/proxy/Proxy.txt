@@ -1,0 +1,34 @@
+The Proxy pattern acts as an Interface to something else
+
+Concepts:
+. Interface by wrapping
+. Can add functionality to the wrapped Object -> Security, Simplicity, Remote, Cost
+. Proxy called to access real object
+Examples: java.lang.reflect.Proxy, java.rmi.*
+
+Design:
+. Intermediary Object that intercepts calls
+. Typically Interface based
+. Interface and Implementation class
+    java.lang.reflect.InvocationHandler
+    java.lang.reflect.Proxy
+. UML Diagram pieces:
+    Client, Interface, InvocationHandler, Proxy, Implementation
+
+Pitfalls:
+- Only one proxy
+- Another layer of Abstraction
+- Similar to other patterns
+
+Contrast:
+
+        | PROXY |                                   | DECORATOR |
+- Can add functionality                     - Dynamically adds functionality
+- Can only have one                         - Chained pattern
+- Functionality is set at Compile time      - Functionality determined at Runtime
+                                            - Decorator points to its own type
+
+Summary:
+- Great utilities built into Java API
+- Only one instance
+- Used by various Dependency Injection / Inversion Of Control Frameworks

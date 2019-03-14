@@ -1,0 +1,37 @@
+The Builder pattern is a pattern that people often use, but rarely crete their own.
+ It is a great pattern for handling the construction of objects that may contain a lot o
+  parameters and we want to make the object immutable once we are done constructing it.
+
+Concepts:
+. Handles complex constructors
+. Large numbers of parameters
+. Immutability
+Examples: StringBuilder, DocumentBuilder, Locale.Builder
+
+Design:
+. Flexibility over telescoping constructors
+. Static inner class
+. Calls appropriate constructor
+. Negates the need for exposed setters
+. Java 1.5+ can take advantage of Generics
+
+Pitfalls:
+- Objects created with the builder are typically designed to be immutable
+- The pattern is typically implemented with a static inner class
+- Usually designed first
+- Adds more complexity to construction
+    -> Object returns itself for each subsequent call
+
+Contrast:
+
+    | BUILDER |                                         |  PROTOTYPE  |
+- handles complex constructors                    - implemented around a clone
+- no interface required                           - avoids calling complex constructors
+- can be a separate class                         - difficult to implement in legacy code
+- works with legacy code
+
+Summary:
+- Creative way to deal with complexity surrounding constructors and the creation of objects
+- Easy to implement, if done correctly
+- Few drawbacks
+- Can refactor in with separate class

@@ -1,0 +1,34 @@
+The Composite pattern is a hierarchical type pattern that deals with tree structures of information.
+
+Concepts:
+. Components represent part or whole structure
+. Compose Objects into tree structures
+. Individual Object treated as a Composite
+. Same operations applied on individual and Composites
+Examples: java.awt.Composites, JSF widgets, RESTful service GETs
+
+Design:
+. Tree structured
+. Component
+. Leaf or Composite, same operations
+. Composite knows about child Objects
+. Component, Leaf, Composite
+
+Pitfalls:
+- Can overly simplify a system
+- Difficult to restrict
+    -> Ends up relying on runtime checks to see if objects added can in fact be added instead of compile time safety
+- Implementation can possibly be costly
+
+Contrast:
+
+    | COMPOSITE |                                      | DECORATOR |
+- Tree structure                                - Contains another entity
+- Leaf and Composite have same interface        - Modifies behavior (adds)
+- Unity between objects                         - Doesn't change underlying object
+
+Summary:
+- Generalizes a hierarchical structure
+- Can simplify things too much
+- Easier for clients
+- Composite != Composition

@@ -1,0 +1,35 @@
+The State pattern is used to represent State in applications
+
+Concepts:
+. Localize state behavior
+. State is stored in an Object
+. Separates What from Where
+. Open-Close-Principle
+Examples: None!, JSF?, Iterator?
+
+Design:
+. Abstract class / Interface based
+. Class based
+. Context unaware
+. UML Diagram pieces:
+    Context, State, ConcreteState
+
+Pitfalls:
+- Know all your States
+- More classes to manage
+- Keeping logic in State Objects
+- State change triggers
+
+Contrast:
+
+        | STATE |                           | STRATEGY |
+- Interface based                       - Interface based
+- Transitions                           - Algorithms are independent
+- Class per State                       - Class per algorithm
+- Collection of Concrete States         - Client knows all Strategies
+
+Summary:
+- Simplifies cyclomatic complexity
+- Adding additional states is much easier
+- More classes to manage
+- Similar implementation to Strategy

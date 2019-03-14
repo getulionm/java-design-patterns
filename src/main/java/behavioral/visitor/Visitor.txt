@@ -1,0 +1,36 @@
+The Visitor pattern is a great way to separate an algorithm from an Object structure
+
+Concepts:
+. Separate algorithm from Object
+. Adding new features
+. Maintain open/close principle
+. Visitor changes
+Examples: java.lang.model.element.Element, java.lang.model.element.ElementVisitor
+
+Design:
+. Interface based
+. Must be designed from beginning ( hard to retrofit )
+. Visitor and Element
+. Elements have visit method
+. Visitor knows every Element
+. UML Diagram pieces:
+    Visitor, ConcreteVisitor, Element, ConcreteElement
+
+
+Pitfalls:
+- Plan for adaptability
+- Indirection somewhat confusing
+- Adapter pattern might be useful
+
+Contrast:
+
+      | VISITOR |                                  | ITERATOR |
+- Interface based                               - Interface based / anonymous
+- Adaptability through externalized changes     - Encapsulates navigation
+- Multiple visitors                             - Singular
+
+Summary:
+- Expecting changes
+- Adds minor complexity
+- Externalizes changes
+- Great way to have tests inside the application without breaking contracts by adding functionality down the road

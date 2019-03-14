@@ -1,0 +1,35 @@
+The Factory pattern is in some ways the opposite of the Singleton pattern
+ and probably is the second most used creational design pattern.
+
+Concepts:
+. Doesn't expose instantiation logic
+. Defer to subclasses
+. Common interface
+. Specified by architecture, implemented by user
+Examples: Calendar, ResourceBundle, NumberFormat
+
+Design:
+. Factory is responsible for lifecycle
+. Objects created are referenced through a common interface
+. Concrete Classes
+. Parameterized create method
+
+Pitfalls:
+- Complexity
+- Creation in subclasses
+- Generaly not refactored into, has to be planned accordingly
+
+Contrast:
+
+    | SINGLETON |                                    |  FACTORY  |
+- returns same instance                       - returns various instances
+- one constructor method - no args            - multiple constructors
+- no interface                                - interface / abstract classes - (contracts) driven
+- no subclasses (typically)                   - subclasses are involved
+                                              - adaptable to environment more easily
+
+Summary:
+- Parameter driven
+- Solves complex creation
+- A bit complex
+- Opposite of a Singleton

@@ -1,0 +1,37 @@
+The Interpreter pattern used to represent the grammar of a language
+
+Concepts:
+. Represents grammar
+    Compiles use the Interpreter pattern to oftentimes parse source code
+. Interpret a sentence
+. Map a domain
+Examples: java.util.Pattern, java.text.Format
+
+Design:
+. AbstractExpression
+    Abstract based class that declares an Interface for executing an operation
+. Interpret method
+. TerminalExpression / NonterminalExpression
+. UML Diagram pieces:
+    Context, AbstractExpression, TerminalExpression, NonterminalExpression, Client
+
+Pitfalls:
+- Complexity
+- Class per rule
+- Use of other patterns
+- Adding new variant
+- Specific case
+
+Contrast:
+
+     | INTERPRETER |                                         | VISITOR |
+- Access to properties                                  - Needs Observer functionality
+- Functions as methods                                  - Functionality found in one place
+- Adding new functionality changes every variant        - Adding new variant requires changing every visitor
+
+Summary:
+- Define a grammar
+- Rules of validation
+- Special case pattern
+    Solves a very specific problem
+- Consider the Visitor pattern

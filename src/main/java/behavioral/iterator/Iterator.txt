@@ -1,0 +1,35 @@
+The Iterator pattern is great for providing navigation without exposing the sctructure of an Object
+
+Concepts:
+. Traverse a container / collection
+. Don't expose underlying structure
+. Decouples algorithms used to traverse
+. Sequential in nature
+Examples: java.util.Iterator, java.util.Enumeration
+
+Design:
+. Interface based
+. Factory method based
+. Independent, but are fail fast ( two iterators can't modify the underlying Object without an error being thrown)
+. Enumerators are fail safe
+. UML Diagram pieces:
+    Iterator Interface, ConcreteIterator
+
+Pitfalls:
+- No access to index
+- Unidirectional
+    ListIterator has a forth and back capability
+- Not always more efficient / fast
+
+Contrast:
+
+     | ITERATOR |                       | FOR LOOP |
+- Interface based                   - Traversal in client
+- Algorithm is removed              - Exposes an index
+- No index                          - Doesn't change underlying Object
+- Concurrent modification           - Typically slower
+
+Summary:
+- Efficient way to traverse an Object
+- Hides algorithm
+- Simplify client

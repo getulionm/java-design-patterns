@@ -1,0 +1,33 @@
+The Facade pattern provides a simplified interface to a complex or difficult-to-us
+ system that is often the result of a poorly designed API.
+
+Concepts:
+. Makes an API easier to use
+. Reduces dependencies on outside code
+. Simplify the interface or client usage
+. Usually a refactoring pattern
+Examples: java.net.URL, javax.faces.context.FacesContext
+
+Design:
+. Class utilizes composition
+. Shouldn't have a need for Inheritance
+. Typically encompasses full lifecycle
+
+Pitfalls:
+- Typically used to clean up code
+- Should think about API design
+- Flat problem/structure
+- Often misused or overused due to its ease of implementation
+
+Contrast:
+
+        | FACADE |                              | ADAPTER |
+- Simplifies an Interface               - Also a refactoring pattern
+- Cleans up behavior usage              - Modifies behavior (adds)
+- Works with composites                 - Provides a different interface
+
+Summary:
+- Simplifies client Interface
+- Easy pattern to implement
+- Refactoring pattern
+    -> Added layer to reduce dependencies that client is looking at

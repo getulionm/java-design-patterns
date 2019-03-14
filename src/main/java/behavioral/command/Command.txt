@@ -1,0 +1,36 @@
+The Command pattern lets you encapsulate each request as an Object
+
+Concepts:
+. Encapsulates each request as an Object
+. Object-oriented callback
+. Decouple sender from processor
+. Often used for "undo" functionality
+Examples: java.lang.Runnable, javax.swing.Action
+
+Design:
+. Object per Command
+. Command Interface
+. Execute method
+. "Unexecute" method
+. Reflection
+. UML Diagram pieces:
+    Command, Invoker, ConcreteCommand
+
+Pitfalls:
+- Dependence on other patterns
+- Multiple Commands
+- Make use of Memento
+- Prototype for copies
+
+Contrast:
+
+    | COMMAND |                              | STRATEGY |
+- Object per Command                    - Object per Strategy
+- Class contains the "what"             - Class contains the "how"
+- Encapsulates action                   - Encapsulates algorithm
+
+Summary:
+- Encapsulates each request as an Object
+- Decouples sender from processor
+- Very few drawbacks
+- Often used for undo functionality

@@ -1,0 +1,35 @@
+The Mediator pattern is used to define how Objects interact
+ with one another without having them refer to each other explicitly
+
+Concepts:
+. Loose coupling
+. Well-defined, but complex Objects
+. Reusable components
+. Hub / Router
+Examples: java.util.Timer, java.lang.reflect.Method#invoke()
+
+Design:
+. Interface based
+. Concrete class
+. Minimizes Inheritance
+. Mediator knows about colleagues
+. UML Diagram pieces:
+    Mediator, ConcreteMediator
+
+Pitfalls:
+- Careful not to create a deity Object
+- Can limit subclassing
+- Can become a bit confusing
+
+Contrast:
+
+        | MEDIATOR |                          | OBSERVER |
+- Defines interaction of Objects        - One-to-Many (broadcasts to all listeners)
+- Object decoupling                     - Object decoupling
+- More specific                         - More generic
+
+Summary:
+- Loose coupling
+- Simplified communication
+- Mediator complexity
+- Suggested to use with Command pattern

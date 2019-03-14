@@ -1,0 +1,33 @@
+The Template Method pattern is used to define an algorithm that allows
+ subclasses to redefine parts of the algorithm without changing its structure
+
+Concepts:
+. Fantastic technique for code reuse
+. Common in libraries/frameworks
+. Algorithm emphasis
+Examples: java.util.Collections#sort(), java.util.AbstractList#indexOf()
+
+Design:
+. Abstract base class
+. Base calls Child
+. Hooks         - may be Overridden
+. Operations    - must be Overridden
+. UML Diagram pieces:
+    AbstractBase, ConcreteClass
+
+Pitfalls:
+- Needs restriction of access to some methods
+- Confusing class hierarchy
+- Difficult program flow
+
+Contrast:
+
+     | TEMPLATE METHOD |                                | STRATEGY |
+- Same algorithm - different implementations        - Algorithm per Strategy
+- Class based                                       - Interface based
+- Algorithm chosen at Compile time                  - Algorithm picked at Run time
+
+Summary:
+- Guarantees Algorithm adherence
+- Commonly used in Inversion of Control (IoC) / Dependency Injection (DI) containers
+- Easier implementation

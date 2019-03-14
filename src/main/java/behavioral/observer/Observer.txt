@@ -1,0 +1,36 @@
+The Observer pattern is a decoupling pattern when we have a subject that needs to be observed by one or more Observers
+
+Concepts:
+. One to many Observers
+. Decoupled
+. Event Handling
+. Pub/Sub
+. M-V-C situations
+Examples java.util.Observer, java.util.EventListener, javax.jsm.Topic
+
+Design:
+. Subject ( typically an Interface or Abstract class that we make concrete implementations of )
+. Observer ( Interface based with various concrete implementations )
+. Observable Interface
+. Views are Observers in an event driven application
+. UML Diagram pieces:
+    Subject, Concrete Subject, Observer, Concrete Observer
+
+Pitfalls:
+- Unexpected updates
+- Large sized consequences / Performance hits
+- Confusing updates
+- Difficult debugging
+
+Contrast:
+
+        | OBSERVER |                                    | MEDIATOR |
+- One-to-Many (broadcasts to all listeners)     - One-to-one-to-Many
+- Object decoupling                             - Object decoupling
+- Broadcast communication                       - Complex communication
+                                                - Can be implemented with an Observer in
+
+Summary:
+- Often used for decoupled communication
+- Built in functionality in the java API
+- Typically used with Mediator

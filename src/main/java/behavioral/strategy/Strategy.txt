@@ -1,0 +1,35 @@
+The Strategy pattern is used to select a strategy or algorithm at runtime.
+
+Concepts:
+. Eliminates/minimizes conditional statements
+. Behavior encapsulated in classes
+. Difficult to add new strategies
+. Client aware of strategies
+. Client chooses strategy
+Examples: java.util.Comparator
+
+Design:
+. Abstract base class
+. Concrete class per strategy
+. Removes if/else conditionals
+. Strategies are independent
+. UML Diagram pieces:
+    Context, Strategy, ConcreteStrategy
+
+Pitfalls:
+- Client aware of Strategies -> Strategies have to be chosen
+- Increased number of classes
+
+Contrast:
+
+     | STRATEGY |                       | STATE |
+- Interface based                   - Interface based
+- Algorithms are independent        - Transitions
+- Class per algorithm               - Class per State
+- Client knows all Strategies       - Collection of Concrete States
+
+Summary:
+- Externalizes algorithms
+- Client knows different Strategies
+- Class per Strategy
+- Reduces conditional statements

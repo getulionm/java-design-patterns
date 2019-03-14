@@ -1,0 +1,38 @@
+The Abstract Factory is very similar to the factory metho
+ pattern and is typically implemented as a facroty of factory patterns
+
+Concepts:
+. Factory of factories
+. Factory of related objects
+. Common interface
+. Defer to subclasses
+Example: DocumentBuilder
+
+Design:
+. Group Factories together
+. Factory is responsible for lifecycle
+. Common Interface carried throughout the AbstractFactory / ConcreteFactory / ImplementingClass
+. Concrete Classes
+. Parameterized create method
+. Typically built using Composition
+
+Pitfalls:
+- Complexity
+- Runtime switch
+- Pattern within a pattern
+- Tackled a very specific problem -> it is a grouping of factories
+- Usually starts off as a factory and gets refactored
+
+Contrast:
+
+    | ABSTRACT FACTORY |                                 |  FACTORY  |
+- Implemented with a Factory                      - Returns various instances
+- Hides the Factory being used                    - Multiple constructors
+- Abstracts environment                           - Interface driven
+- Built through Composition                       - Adaptable to environment easily
+
+Summary:
+- Group of similar Factories
+- Complex
+- Heavy abstraction
+- Typically written as a framework pattern

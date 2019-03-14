@@ -1,0 +1,36 @@
+The Chain of Responsibility pattern is a that decouples a request
+ from a handling Object in a chain of handlers until it is finally recognized
+
+Concepts:
+. Decoupling of sender and receiver
+. Receiver contains reference to next receiver
+. Promotes loose coupling
+. No Handler - OK
+Examples: java.util.logging.Logger#log(), javax.servlet.Filter#doFilter, Spring Security Filter Chain
+
+Design:
+. Chain of receiver Objects
+. Each Handler is Interface based
+. ConcreteHandler for each implementation
+. Each Handler has a reference to the next
+. UML Diagram pieces:
+    Handler, ConcreteHandler
+
+Pitfalls:
+- Handling/Handler guarantee
+- Runtime configuration risk
+- Chain lenght / performance issues
+
+Contrast:
+
+    | CHAIN OF RESPONSIBILITY |                   | COMMAND |
+- Handler is unique                         - Command is also unique
+- Successor                                 - Encapsulates function
+- Can utilize the Command                   - Reversible or trackable in nature
+
+Summary:
+- Decouples sender and receiver
+- Runtime configuration
+- Hierarchical in nature
+- Careful with large chains
+    Can become a bottleneck or just confusing
